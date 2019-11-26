@@ -24,8 +24,8 @@ function Push-Package() {
     if (!$All) { $packages = $packages | select -First 1 }
     if (!$packages) { throw 'There is no nupkg file in the directory'}
     if ($api_key) {
-        $packages | % { cpush $_.Name --api-key $api_key --source $push_url }
+        $packages | % { nuget.exe push $_.Name -ApiKey $api_key -Source $push_url }
     } else {
-        $packages | % { cpush $_.Name --source $push_url }
+        $packages | % { nuget.exe push $_.Name -Source $push_url }
     }
 }
