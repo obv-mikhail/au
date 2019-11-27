@@ -2,6 +2,7 @@
 
 $s = {
     chocolatey
+    psgallery
     git_4windows
 
     pester
