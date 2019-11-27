@@ -32,7 +32,7 @@ function chocolatey() {
 function psgallery() {
     "Installing PSGallery"
 
-    Install-PackageProvider -Name NuGet -Force
+    # Install-PackageProvider -Name NuGet -Force
     Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 }
 
